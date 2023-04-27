@@ -3,7 +3,7 @@ async function loadProducts() {
     let products = await res.json();
     let markup = "<ul>";
     for (let i = 0; i < products.list.length; i++) {
-        markup = markup + `<li>${products.list[i].title}</li>`
+        markup = markup + `<li>${products.list[i].title}-${products.list[i].price}</li>`
     }
     markup = markup + "</ul>";
     document.querySelector("#products").innerHTML = markup;
